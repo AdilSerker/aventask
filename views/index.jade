@@ -1,0 +1,14 @@
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		title!= title
+		link(rel='stylesheet', href='/css/style.css', type='text/css')
+	body
+		.head
+			form(action="/command", method="POST")
+				label!= message
+				input(type="text", name="cmd", autocomplete="off", placeholder="start" autofocus)
+				input(type="submit", value="OK")
+		.main
+			.content
+				.p!= output
